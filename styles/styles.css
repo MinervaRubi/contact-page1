@@ -5,58 +5,50 @@
 }
 
 body {
-  font-family: Arial, sans-serif; 
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url('imagenes/background.svg'); 
-    background-size: cover;
-    background-position: center;
-    color: #fff; 
-    text-align: center;
+  font-family: "Inter", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(background.svg);
+  text-align: center;
 }
 
 .contenido {
-  background-color: rgba(255, 255, 255, 0.95); 
   padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.15);
+  border-radius: 24px;
   width: 100%;
-  max-width: 600px;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 30px;
+  max-width: 520px;
+  box-shadow: 0 24px 60px white;
 }
 
 .logo {
   width: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 header h1 {
-  font-size: 28px;
-  color: #1a1a1a;
-  margin-bottom: 10px;
-}
-
-header h1 span {
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
 }
 
 header p {
-  font-size: 14px;
-  color: #555;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 28px;
 }
 
-.contato .company {
+.contacto {
   display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fila {
+  display: flex;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
@@ -64,83 +56,39 @@ header p {
 .contacto select,
 .contacto textarea {
   width: 100%;
-  padding: 12px 15px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: border-color 0.3s;
-}
-
-.company input,
-.company select {
-  flex: 1;
-  min-width: 200px;
-}
-
-.contacto textarea {
-  resize: vertical;
-  margin-bottom: 20px;
-}
-
-.contacto input:focus,
-.contacto select:focus,
-.contacto textarea:focus {
-  border-color: #6839ef;
-  outline: none;
-}
-
-.contacto button {
-  width: 100%;
-  padding: 15px;
-  background-color: #6839ef;
-  color: white;
+  padding: 14px;
+  font-size: 15px;
+  background: #fff;
+  color: #444;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
-.contacto button:hover {
-  background-color: #512bd4;
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+button {
+  width: 80%;
+  padding: 16px;
+  background:blue;
+  color:white;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.7s;
+}
+
+button:hover {
+  background: black;
 }
 
 @media (max-width: 600px) {
-  header h1 {
-    font-size: 22px;
-  }
-
-  .company {
+  .fila {
     flex-direction: column;
   }
-
-  .company input,
-  .company select {
-    width: 100%;
-  }
-}
-
-.company {
-    display: flex;         /* 1. Activa Flexbox para acomodar los elementos en una fila. */
-    flex-wrap: wrap;       /* 2. Permite que los elementos se "envuelvan" a la siguiente línea si no caben (importante para la responsividad). */
-    gap: 20px;             /* 3. Crea el espacio entre los campos, tanto horizontal como verticalmente. */
-    margin-bottom: 20px;   
-}
-
-/* Este es cada campo individual del formulario. */
-.contacto {
-    flex: 1 1 calc(50% - 10px); /* 5. Hace que cada campo ocupe aproximadamente la mitad del espacio disponible. */
-    min-width: 200px;           /* 6. Asegura que los campos no se hagan demasiado pequeños en pantallas más angostas. */
-}
-
-/* Esta es la regla específica para el campo de mensaje. */
-.contacto.full-width {
-    flex: 1 1 100%;             /* 7. Le dice a este campo que debe estirarse y ocupar el 100% del ancho del contenedor. */
-}
-
-/* Se asegura de que en pantallas muy pequeñas, los campos se apilen en una sola columna. */
-@media (max-width: 768px) {
-    .company {
-        flex-direction: column; /* 8. Cambia la dirección del acomodo a una columna. */
-    }
 }
