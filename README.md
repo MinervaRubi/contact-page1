@@ -21,7 +21,7 @@ hacer una pagina de contacto
 ---
 
 ## 🔗 Enlace al proyecto
-Repositorio en GitHub: [Pega aquí tu enlace]  
+Repositorio en GitHub: https://github.com/MinervaRubi/contact-page1.git
 Deploy: [LINK](http://yomidev.github.io/newsletter/)
 ---
 
