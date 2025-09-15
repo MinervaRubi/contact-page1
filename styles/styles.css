@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('imagenes/background.svg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff; 
+    text-align: center;
+}
+
+.contenido {
+  background-color: rgba(255, 255, 255, 0.95); 
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 30px 100px 0px rgba(17, 23, 41, 0.15);
+  width: 100%;
+  max-width: 600px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+header h1 span {
+  font-weight: bold;
+}
+
+header p {
+  font-size: 14px;
+  color: #555;
+}
+
+.contato .company {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.contacto input,
+.contacto select,
+.contacto textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.company input,
+.company select {
+  flex: 1;
+  min-width: 200px;
+}
+
+.contacto textarea {
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+.contacto input:focus,
+.contacto select:focus,
+.contacto textarea:focus {
+  border-color: #6839ef;
+  outline: none;
+}
+
+.contacto button {
+  width: 100%;
+  padding: 15px;
+  background-color: #6839ef;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contacto button:hover {
+  background-color: #512bd4;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
+  }
+
+  .company {
+    flex-direction: column;
+  }
+
+  .company input,
+  .company select {
+    width: 100%;
+  }
+}
+
+.company {
+    display: flex;         /* 1. Activa Flexbox para acomodar los elementos en una fila. */
+    flex-wrap: wrap;       /* 2. Permite que los elementos se "envuelvan" a la siguiente línea si no caben (importante para la responsividad). */
+    gap: 20px;             /* 3. Crea el espacio entre los campos, tanto horizontal como verticalmente. */
+    margin-bottom: 20px;   
+}
+
+/* Este es cada campo individual del formulario. */
+.contacto {
+    flex: 1 1 calc(50% - 10px); /* 5. Hace que cada campo ocupe aproximadamente la mitad del espacio disponible. */
+    min-width: 200px;           /* 6. Asegura que los campos no se hagan demasiado pequeños en pantallas más angostas. */
+}
+
+/* Esta es la regla específica para el campo de mensaje. */
+.contacto.full-width {
+    flex: 1 1 100%;             /* 7. Le dice a este campo que debe estirarse y ocupar el 100% del ancho del contenedor. */
+}
+
+/* Se asegura de que en pantallas muy pequeñas, los campos se apilen en una sola columna. */
+@media (max-width: 768px) {
+    .company {
+        flex-direction: column; /* 8. Cambia la dirección del acomodo a una columna. */
+    }
+}
